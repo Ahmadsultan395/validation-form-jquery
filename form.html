@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation form</title>
+</head>
+<style>
+    h1 {
+        /* text-align: center; */
+        font-size: 2rem;
+        font-weight: 700;
+        color: rgb(1, 47, 107);
+    }
+
+    section {
+        /* background-color: skyblue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #myform {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(120, 192, 220, 0.522);
+        min-height: 50vh;
+        width: 50%;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+/* .checkbox{
+    display: flex;
+}
+.checkbox input{
+    margin-top: 1rem;
+} */
+
+    input:not([type=checkbox]) {
+        height: 2rem;
+        border-radius: 1rem;
+    }
+
+    label:not([class=error]) {
+        color: rgb(0, 0, 135);
+        margin-top: 1rem;
+        margin-bottom: .1rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    label.error {
+        color: red;
+    }
+</style>
+
+<body>
+
+
+    <section>
+        <h1>Registration Form</h1>
+
+        <form action="" id="myform">
+        <!-- fname -->
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" name="fname" placeholder="enter first name" required>
+
+            <!-- lname -->
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter last name" required>
+
+            <!-- phone number -->
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" placeholder=" EnterPhone Number" required>
+
+            <!-- email address/ -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder=" Enter Email" required>
+
+            <!-- digits number -->
+            <label for="digits">Digits Numbers</label>
+            <input type="text" id="digits" name="digits" placeholder=" Enter Digit Number" required>
+
+            <!-- password -->
+            <label for="Password">Password</label>
+            <input type="password" id="password" name="password" placeholder=" Enter password" required>
+
+            <!-- comfirm password -->
+            <label for="Cpassword">Confirm Password</label>
+            <input type="password" id="Cpassword" name="Cpassword" placeholder="Confirm Password" required>
+
+            <!-- ip address -->
+            <label for="ipaddress">IP Address</label>
+            <input type="text" id="ipaddress" name="ipaddress" placeholder="Enter Ip Address" required>
+
+            <!-- alphanumeric -->
+            <label for="alphanumeric">Alpha numeric</label>
+            <input type="text" id="alphanumeric" name="alphanumeric" placeholder="Enter Alpha numeric" required>
+
+            <!-- white no in text -->
+            <label for="nowhitespace">with out space word</label>
+            <input type="text" id="nowhitespace" name="nowhitespace" placeholder="Enter Alpha " required>
+
+            <!-- only letter you can write -->
+            <label for="lettesonly">Alpha leter only write</label>
+            <input type="text" id="lettesonly" name="lettesonly" placeholder="Enter english word only" required>
+
+            <!-- url -->
+            <label for="url">enter URL here</label>
+            <input type="text" id="url" name="url" placeholder="Enter URL" required>
+
+            <!-- less then -->
+            <label for="lessthen">less then</label>
+            <input type="text" id="lessthen" name="lessthen" placeholder="Enter less then" required>
+
+            <!-- greater then -->
+            <label for="greaterthen">Greater then</label>
+            <input type="text" id="greaterthen" name="greaterthen" placeholder="Enter Greater then" required>
+
+            <!-- less then equal to -->
+            <label for="lesstheneq">lessthen equal to</label>
+            <input type="text" id="lesstheneq" name="lesstheneq" placeholder="Enter less then Equal to " required>
+
+            <!-- greater then Equal to  -->
+            <label for="greatertheneq">Greater then equal to </label>
+            <input type="text" id="greatertheeq" name="greatertheneq" placeholder="Enter Greater then Equal to "
+                required>
+
+            <!-- address -->
+            <label for="address">Your Address </label>
+            <textarea name="address" id="address" name="address" type="text" placeholder=" Enter your address" cols="15"
+                rows="5" required></textarea>
+
+            <!-- checkbox -->
+            <div class="checkbox">
+                <label for="car">car</label>
+            <input type="checkbox" name="vachile" id="car" class="form-checkbox" required>
+        </div>
+
+        <div class="checkbox">
+            <label for="bike">bike</label>
+            <input type="checkbox" name="vachile" id="bike" class="form-checkbox" required>
+        </div>
+        <label for="vachile" class="error"></label>
+
+           <!-- radio button -->
+           <div class="radiobutton">
+            <label for="male">male</label>
+        <input type="radio" name="gender" id="male" class="form-radio" required>
+    </div>
+
+    <div class="radiobutton">
+        <label for="female">bike</label>
+        <input type="radio" name="gender" id="female" class="form-radio" required>
+    </div>
+    <label for="gender" class="error"></label>
+
+    <!-- drop down list -->
+<label for="subject">subjects</label>
+<select name="subject" id="subject">
+    <option value="0">--select--</option>
+    <option value="1">Math</option>
+    <option value="2">Physic</option>
+    <option value="3">chemistry</option>
+    <option value="4">english</option>
+    <option value="5">computer</option>
+</select>
+<!-- date iso  -->
+<label for="dateiso">date in iso</label>
+<input type="text" id="dateiso" name="dateiso" placeholder="Enter date in iso " required>
+ 
+<!-- date ita  -->
+<label for="dateita">date in ita</label>
+<input type="text" id="dateita" name="dateita" placeholder="Enter date in ITA " required>
+
+
+<!-- CNIC number  validation  -->
+<label for="cnic">Enter CNIC Number</label>
+<input type="text" id="cnic" name="cnic" placeholder="Enter CNIC Number " required>
+
+
+<!-- submit button -->
+            <button type="submit" id="submit-btn">Submit</button>
+
+        </form>
+    </section>
+
+
+    <!-- jquery file linked -->
+    <script src="./jQuery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.js"></script>
+    <!-- main javascript file -->
+    <script src="./form.js"></script>
+</body>
+
+</html>
